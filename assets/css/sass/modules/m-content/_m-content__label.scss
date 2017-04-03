@@ -1,0 +1,42 @@
+.m-content__label {
+
+	&:focus {
+		outline: 0;
+	}
+
+	&--small {
+		@include m-content__label();
+		@include font-size( 10 );
+		@media ( min-width: $bp-small-mid ) {
+			@include font-size( 12 );
+		}
+		margin: 15px 0 0;
+
+		@media ( max-width: $bp-small-mid ) {
+			margin: 5px 0 5px;
+		}
+
+		a {
+			text-decoration: none;
+			border: none !important;
+			box-shadow: 0;
+			color: $c-gray-light;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+				box-shadow: 0;
+			}
+
+		}
+
+		span {
+			font-weight: 400;
+
+			@media ( min-width: $bp-small-mid ) {
+				@include visually-hidden();
+			}
+		}
+	}
+
+} // .m-content__label

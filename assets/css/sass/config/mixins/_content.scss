@@ -1,0 +1,18 @@
+// Content Label
+@mixin m-content__label() {
+	color: $c-gray-light;
+	font-weight: 600;
+	line-height: 13px;
+	overflow: hidden;
+	padding: 0;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin line-clamp( $lines ) {
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	overflow: hidden;
+}

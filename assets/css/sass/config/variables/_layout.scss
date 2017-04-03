@@ -1,0 +1,15 @@
+/*
+	Layout
+*/
+
+// Breakpoints
+$bp-tiny: 25em !default;       // 400px
+$bp-small: 37.5em !default;  // 625px
+$bp-small-mid: 45.438em !default; // 727px
+$bp-medium: 53.125em !default; // 850px
+$bp-large: 65em !default;    // 1040px
+$bp-wide: 72.500em !default;    // 1160px
+$bp-xwide: 84.375em !default;    // 1350px
+
+// Grid
+$l-gutter: 20px;

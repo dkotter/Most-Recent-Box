@@ -1,0 +1,68 @@
+.is-hidden {
+	@include move-off-screen();
+
+	&--md {
+		@include move-off-screen();
+
+		@media ( min-width: $bp-medium ) {
+			position: static;
+			top: 0;
+			left: 0;
+		}
+	}
+
+}
+
+.is-removed {
+	display: none;
+
+	&--md {
+		@media ( min-width: $bp-medium ) {
+			display: none;
+		}
+	}
+
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.text-middle {
+	text-align: center;
+}
+
+.text-small {
+	@include font-size( 16 );
+}
+
+.text-dim {
+	opacity: .75;
+}
+
+.block-middle {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+
+.cf {
+	@include clearfix();
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.posR {
+	position: relative;
+}

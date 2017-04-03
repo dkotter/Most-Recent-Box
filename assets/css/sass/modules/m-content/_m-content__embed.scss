@@ -1,0 +1,74 @@
+/**
+ * Note, use of !important here to override styling
+ * from some themes, which impacts ours. Could have
+ * made our selectors more precise, or could have
+ * just allowed the themes to easily override our
+ * styling, but for the sake of this exercise, I
+ * decided to use !important to give our styles precedence.
+ */
+.m-content__embed {
+	clear: both;
+	margin: 10px 0 0;
+	padding: 10px 0 20px;
+	font-family: $f-primary;
+
+	&--media {
+		margin-bottom: 30px;
+
+		@media ( min-width: $bp-medium ) {
+			margin: 0;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			border-radius: 3px;
+		}
+	}
+
+	&--heading {
+		@include txt-h2();
+		font-weight: 600;
+		color: $c-gray-dark;
+		margin: 0 !important;
+
+		@media ( max-width: $bp-small-mid ) {
+			font-size: 16px !important;
+			line-height: 17px;
+		}
+
+		a {
+			text-decoration: none;
+			border: none !important;
+
+			@media ( max-width: $bp-small-mid ) {
+				line-height: 17px !important;
+			}
+		}
+	}
+
+	&--copy {
+		@media ( max-width: $bp-small-mid ) {
+			@include visually-hidden();
+		}
+
+		p {
+			@include font-size( 13 );
+			line-height: 22px;
+			margin: 0;
+			color: $c-gray;
+
+			a {
+				color: $c-red;
+				text-decoration: none;
+				border: none !important;
+			}
+
+			.time {
+				font-style: italic;
+			}
+
+		}
+	}
+
+} // .m-content__embed

@@ -1,0 +1,31 @@
+// Clearfix
+@mixin clearfix () {
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }
+}
+
+// Move element off screen
+@mixin move-off-screen () {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+}
+
+@mixin visually-hidden () {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute !important;
+}
+
+// font size
+@mixin font-size ( $size: 14, $parentSize: 16 ) {
+  font-size: $size + 0px !important;
+}
